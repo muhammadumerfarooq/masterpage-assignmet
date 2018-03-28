@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+           <asp:ContentPlaceHolder id="title" runat="server">
+    </asp:ContentPlaceHolder>
+
+    </title>
+    <link href="Styles/Style.css" rel="stylesheet" />
+   <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 94px;
+            margin-left: 10;
+        }
+        .auto-style2 {
+            width: 136px;
+            margin-right: 38;
+        }
+        .auto-style3 {
+            width: 89px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="wrapper">
+            <div class="menu">
+                <ul>
+                   <li> <a href="Home.aspx">Home</a></li>
+                    <li class="auto-style2"> <a href="UserInfo.aspx"></a>SigIn</li>
+                    <li class="auto-style3"> <a href="Login.aspx">LogIn</a></li>
+                    <li class="auto-style1"> <a href="Survey.aspx"></a>Survey</li>
+                    <li class="auto-style1"> <a href="Menu.aspx"></a>Menu</li>
+
+
+  
+                </ul>
+
+            </div>
+      <div class="clear">
+
+      </div>
+    <div class="content">
+
+        <asp:ContentPlaceHolder id="ContentBody" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+            <div class="clear">
+
+            </div>
+            <div class="footer">
+                <h2>@CopyrightFastNuces.com</h2>
+            </div>
+      </div>
+            </form>
+</body>
+</html>

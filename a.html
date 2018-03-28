@@ -1,0 +1,70 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:h="http://java.sun.com/jsf/html"
+ xmlns:f="http://java.sun.com/jsf/core"
+ xmlns:ui="http://java.sun.com/jsf/facelets">
+ 
+ 
+
+ <h:form>
+ <h:body>
+
+ <head>
+
+<style type="text/css">
+
+body{
+background-color:black;
+color:white;
+}
+h3{text-align:center;}
+p{text-indent:30px};
+
+</style>
+
+
+
+</head>
+ 
+<h3>
+SPORTS CLUB MANAGEMENT SYSTEM 
+</h3>
+
+  <img src="file:///E:/Semister6/Lab11/WebContent/image/sparc.jpg" width="400" height="300" align="right" />
+ <h:panelGrid >
+   <p> Add Info to Add Player  </p>
+ 
+ <h:outputText value="PlayerName"></h:outputText>
+ <h:inputText value="#{facadeController.addplayerName}"></h:inputText>
+ <h:outputText value="PlayerId"></h:outputText>
+ <h:inputText value="#{facadeController.addplayerId}"></h:inputText>
+ <h:outputText value="PlayerSalary"></h:outputText>
+ <h:inputText  value="#{facadeController.addplayersalary}"></h:inputText>
+ <h:outputText value="PlayerPosition"></h:outputText>
+ <h:inputText  value="#{facadeController.addplayerposition}"></h:inputText>
+
+ 
+ <h:outputText value="PlayerPlayingStatus"></h:outputText>
+ <h:inputText  value="#{facadeController.addplayerplayingstatus}"></h:inputText>
+ 
+ <h:outputText value="PlayerHealthStatus"></h:outputText>
+ <h:inputText  value="#{ facadeController.addplayerhealthStatus}"></h:inputText>
+
+ <h:outputText value="PlayerPerformancePoints"></h:outputText>
+ <h:inputText  value="#{  facadeController.addplayerperfpoints}"></h:inputText>
+ 
+   <p> press button to add Player  </p>
+ 
+ <h:commandButton value="Press" action="#{facadeController.insertplayer(facadeController.addplayerName,facadeController.addplayerId,facadeController.addplayerposition,facadeController.addplayersalary,facadeController.addplayerplayingstatus,facadeController.addplayerhealthStatus,facadeController.addplayerperfpoints)}"></h:commandButton>
+  <h:outputLabel value="#{facadeController.showmessage}"></h:outputLabel>
+ 
+
+
+<br/>
+ 
+</h:panelGrid>
+  
+  </h:body>
+ 
+ </h:form>
+</html>
